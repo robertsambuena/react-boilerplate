@@ -1,0 +1,19 @@
+extends layout
+  
+block scripts
+    script(src="myfile.js")
+
+block content
+    h1 HOME PAGE :D
+    div.login
+    form(name="login", action="/google/callback", method="get")
+        h3 Sign in as
+        label
+            input(type='radio', name='type', value='partner' checked='true')
+            span Partner
+        label
+            input(type='radio', name='type', value='admin')
+            span Admin
+        br
+        br
+        input(type="submit", value="Sign In")
